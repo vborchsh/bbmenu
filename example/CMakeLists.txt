@@ -13,11 +13,12 @@ add_compile_options(
 # Add files to project
 file(GLOB PROJECT_SOURCES
     main.c
-    BBmenu.c
-    BBmenu.h
-    BBmenuPrivate.h
-    BBmenuDefs.h
+    cmd_list_menu.c
     menu.uic
+    ../src/BBmenu.c
+    ../src/BBmenu.h
+    ../src/BBmenuPrivate.h
+    ../src/BBmenuDefs.h
 )
 
 # Tell CMake to create the project executable
