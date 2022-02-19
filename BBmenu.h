@@ -105,7 +105,7 @@
 #ifndef __BBmenu_libGuard__
 #define __BBmenu_libGuard__
 
-#include "./inc/BBmenuDefs.h"
+#include "BBmenuDefs.h"
 
 #define NMENUS 	1000
 #define NSTREAMS 100

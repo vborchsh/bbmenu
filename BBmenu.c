@@ -11,8 +11,8 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "./inc/BBmenu.h"
-#include "./inc/BBmenu_private.h"
+#include "BBmenu.h"
+#include "BBmenuPrivate.h"
 
 menuPtr defineMenu, masterMenu;
 menuPtr	yesNoMenu, onOffMenu, trueFalseMenu;
