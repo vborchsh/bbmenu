@@ -5,7 +5,7 @@
 
 #include "./../src/BBmenu.h"
 
-#include "cmd_list_menu.c"
+#include "cmd_list_menu.h"
 
 int main()
 {

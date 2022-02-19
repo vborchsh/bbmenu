@@ -1,9 +1,5 @@
-#ifndef CMD_LIST_MENU
-#define CMD_LIST_MENU
 
-#include <string.h>
-
-#include "./../src/BBmenu.h"
+#include <cmd_list_menu.h>
 
 void cmd_list_menu(void)
 {
@@ -26,5 +22,3 @@ void cmd_list_menu(void)
             return;
     }
 }
-
-#endif
