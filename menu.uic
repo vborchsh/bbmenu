@@ -1,0 +1,11 @@
+menu main_menu "Main menu" "MAIN>> "
+  verb "Commands list"       "List of available commands"
+  verb "Echo"                "Print echo string"
+  verb "Sleep"               "One second sleep"
+  verb "Exit"                "Exit"
+
+!menu cmd_list_menu "Commands list" "CMD_LIST>> "
+!  verb  "Command#1"       "Do something..."
+
+
+end

@@ -10,8 +10,6 @@ int main()
     char *verb;
     int4 iverb;
     char theString[1024];
-    //uint2 minor,major,build;
-    //uint4 err_code;
 
     printf("\nExample for BBmenu\n");
     printf("\nPowered by:\n");
@@ -21,25 +19,13 @@ int main()
     AllowInput=1;
 
     // Load menu
-    //define_file("./../digitizerqusbctrl/QUSB_HPTDC.uic");
+    define_file("C:/Project/PERSONAL/bbmenu/menu.uic");
 
     // Main cycle
     while (1) {
         verb = action_menu("main_menu", &iverb);
 
-        if (strcmp(verb, "INIT") == 0) {
-//            simulate_input("@./../digitizerqusbctrl/hptdc_init.uic");
-        }
-
-        if (strcmp(verb, "HPTDC") == 0) {
-//            HPTDC_menu();
-        }
-
-        if (strcmp(verb, "QUSB") == 0) {
-            //QuickUSB_menu();
-        }
-
-        if (strcmp(verb, "MESSAGE") == 0) {
+        if (strcmp(verb, "ECHO") == 0) {
             get_text("Enter message", theString);
             puts(theString);
         }
@@ -51,12 +37,11 @@ int main()
         }
 
         if (strcmp(verb, "EXIT") == 0) {
-            puts("Closing device...\n");
-            puts("Done!\n");
+            puts("Exiting...\n");
             break;
         }
     }
-    //
+
     return 1;
 }
 
