@@ -3,7 +3,7 @@
 #include <string.h>
 #include <unistd.h>
 
-#include "BBmenu.h"
+#include "./../src/BBmenu.h"
 
 #include "cmd_list_menu.c"
 

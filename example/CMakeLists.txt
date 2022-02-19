@@ -13,7 +13,6 @@ add_compile_options(
 # Add files to project
 file(GLOB PROJECT_SOURCES
     main.c
-    cmd_list_menu.c
     menu.uic
     ../src/BBmenu.c
     ../src/BBmenu.h
