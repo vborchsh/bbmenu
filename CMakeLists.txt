@@ -5,16 +5,8 @@ project(bbmenu VERSION 0.0.1 LANGUAGES C)
 # Find includes in corresponding build directories
 set(CMAKE_INCLUDE_CURRENT_DIR ON)
 
-# Instruct CMake to run moc/resource/ui automatically when needed.
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
-
-#add_definitions(-DQT_NO_DEBUG_OUTPUT)
-#add_definitions(-DQT_NO_INFO_OUTPUT)
-
 add_compile_options(
-    #-Werror
+    -Werror
     -Wall
 )
 
@@ -25,12 +17,8 @@ file(GLOB PROJECT_SOURCES
     BBmenu.h
     BBmenuPrivate.h
     BBmenuDefs.h
-    )
+    menu.uic
+)
 
 # Tell CMake to create the project executable
 add_executable(${CMAKE_PROJECT_NAME} ${PROJECT_SOURCES})
-
-# Disable console when we run release on Windows
-#if(CMAKE_BUILD_TYPE STREQUAL "Release")
-#    set_property(TARGET ${PROJECT_NAME} PROPERTY WIN32_EXECUTABLE true)
-#endif()

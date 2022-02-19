@@ -638,12 +638,10 @@ int4 get_hexadecimal( char *prompt, uint4 *ivalue, uint4 low, uint4 high)
 
 int4 strip_quals( verbPtr verb, char *token)
 {
-	int2 i, found;
-	char *string;
+    int2 i;
 	qualPtr qp;
-	char *data, *resp;
+    char *data;
 
-	found=0;
 /*
  *	printf("Checking qualifiers for verb: %s\n", verb->response);
  */
@@ -669,7 +667,6 @@ int4 strip_quals( verbPtr verb, char *token)
 		if(*(token+i)=='\\')
 		{
 			*(token+i)='\0';
-			resp=token+i+1;
 			/*
 			 * Now look for a corresponding response 
 			 */
@@ -963,7 +960,6 @@ int4 define_file( char *filnam)
 	char *tmp;
 	menuPtr mp=NULL;
 	verbPtr vp=NULL;
-	qualPtr qp=NULL;
 // >>>>> changed by M. Fras, 27 Feb 2009 >>>>>
 //	char prompt[80], descr[256], resp[80], type[80], title[80], name[80];
 	char prompt[BBMENU_STRING_LEN], descr[256], resp[BBMENU_STRING_LEN], type[BBMENU_STRING_LEN], title[BBMENU_STRING_LEN], name[BBMENU_STRING_LEN];
@@ -1077,7 +1073,6 @@ void flush_buffers()
 {
 // >>>>> changed by M. Fras, 27 Feb 2009 >>>>>
 //	char tmp[80];
-	char tmp[BBMENU_STRING_LEN];
 // <<<<< changed by M. Fras, 27 Feb 2009 <<<<<
 	int4 is;
 
