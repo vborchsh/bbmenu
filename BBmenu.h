@@ -123,8 +123,8 @@ char *action_menu( char *, int4 *);
 
 int4 get_short( char *, int2 *, int2, int2);
 int4 get_integer( char *, int4 *, int4, int4);
-int4 get_shorthex( char *, uint2 *, uint2, uint2);
-int4 get_hexadecimal( char *, uint4 *, uint4, uint4);
+int4 get_shorthex( char *, int2 *, int2, int2);
+int4 get_hexadecimal( char *, int4 *, int4, int4);
 int4 get_real( char *, float *, float, float);
 
 int4 get_text(char *, char *);

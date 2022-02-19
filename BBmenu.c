@@ -620,7 +620,7 @@ int4 get_short( char *prompt, int2 *ivalue, int2 low, int2 high)
 	return get_short_data( prompt, ivalue, low, high, "%d");
 }
 
-int4 get_shorthex( char *prompt, uint2 *ivalue, uint2 low, uint2 high)
+int4 get_shorthex( char *prompt, int2 *ivalue, int2 low, int2 high)
 {
 	return get_short_data( prompt, ivalue, low, high, "%X");
 }
@@ -630,7 +630,7 @@ int4 get_integer( char *prompt, int4 *ivalue, int4 low, int4 high)
 	return get_int_data( prompt, ivalue, low, high, "%ld");
 }
 
-int4 get_hexadecimal( char *prompt, uint4 *ivalue, uint4 low, uint4 high)
+int4 get_hexadecimal( char *prompt, int4 *ivalue, int4 low, int4 high)
 {
 	return get_int_data( prompt, ivalue, low, high, "%08lX");
 }
