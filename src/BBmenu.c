@@ -640,7 +640,7 @@ int4 strip_quals( verbPtr verb, char *token)
 {
     int2 i;
 	qualPtr qp;
-    char *data;
+    char *data = 0;
 
 /*
  *	printf("Checking qualifiers for verb: %s\n", verb->response);
@@ -685,7 +685,7 @@ int4 strip_quals( verbPtr verb, char *token)
 					 */
 					if(qp->data)free(qp->data,"qp->data","strip_quals");
 					qp->data=(char *)malloc(sizeof(strlen(data)+1),"qp->data","strip_quals");
-					strcpy(qp->data,data);
+                    strcpy(qp->data, data);
 /*
  *					printf("qual.response=%s\n",qp->response);
  *					printf("qual.data=%s\n",qp->data);
@@ -701,10 +701,10 @@ int4 strip_quals( verbPtr verb, char *token)
 
 char *get_menu_verb( menuPtr theMenuPtr, int4 *iaction)
 {
-	int2 i, j, found, ifound, islash;
-	verbPtr vp, foundVp;
+    int2 i, j, found, ifound = 0, islash;
+    verbPtr vp, foundVp = 0;
 	qualPtr qp;
-	char *foundStr, *tmpstr;
+    char *foundStr = 0, *tmpstr = 0;
 // >>>>> changed by M. Fras, 27 Feb 2009 >>>>>
 //	char tmp[80];
 	char tmp[BBMENU_STRING_LEN];
