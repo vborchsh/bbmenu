@@ -5,6 +5,8 @@
 
 #include "BBmenu.h"
 
+#include "cmd_list_menu.c"
+
 int main()
 {
     char *verb;
@@ -19,11 +21,15 @@ int main()
     AllowInput=1;
 
     // Load menu
-    define_file("C:/Project/PERSONAL/bbmenu/menu.uic");
+    define_file("menu.uic");
 
     // Main cycle
     while (1) {
         verb = action_menu("main_menu", &iverb);
+
+        if (strcmp(verb, "COMMANDS") == 0) {
+            cmd_list_menu();
+        }
 
         if (strcmp(verb, "ECHO") == 0) {
             get_text("Enter message", theString);
