@@ -9,7 +9,7 @@ void cmd_list_menu(void)
     while (1) {
         verb = action_menu("cmd_list_menu", &iverb);
 
-        // if(strcmp(verb, "SHORT")    == 0) get_short();
+        if(strcmp(verb, "SHORT")    == 0) get_short();
         // if(strcmp(verb, "INTEGER")  == 0) get_integer();
         // if(strcmp(verb, "LONG")     == 0) get_long();
         // if(strcmp(verb, "SHORTHEX") == 0) get_shorthex();
